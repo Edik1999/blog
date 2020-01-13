@@ -1,0 +1,351 @@
+@import "vars"
+@import "mixin"
+@import "mediaQuery"
+
+a
+    color: $textColor
+
+body
+    padding: 0
+    margin: 0
+    outline: none
+    color: $textColor
+    font-family: 'Roboto', sans-serif
+    font-size: 14px 
+    font-weight: 400
+    .wrapper
+        position: relative
+        height: 100%
+        top: 0
+        left: 0
+        padding-bottom: 120px
+        .menu_active
+            transform: translateX(0%)!important
+        .menu
+            position: absolute
+            z-index: 99
+            top: 0
+            left: 0
+            height: 100%
+            width: 30%
+            background: #f5f6f7
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            transition: 0.5s
+            transform: translateX(-100%)
+            >a
+                transition: 0.5s
+                font-size: 24px
+                color: $baseColor
+                position: absolute
+                top: 27px
+                right: -45px
+            .menu_search
+                height: 85px
+                width: 100%
+                background: #eff1f2
+                display: flex
+                justify-content: flex-end
+                div
+                    height: 85px
+                    display: flex
+                    align-items: center
+                    width: 100%
+                    max-width: 263px
+                    margin-right: 15px
+                    margin-left: 15px
+                    input
+                        height: 40px
+                        width: 260px
+                        padding: 15px
+                        border: 1px solid $borderColor
+                        border-radius: 10px
+                        font-size: 14px
+                        font-weight: 400
+                        font-family: 'Roboto', sans-serif
+                        outline: 0
+            .menu_list
+                display: flex
+                flex-direction: column
+                max-width: 263px
+                margin-right: 15px
+                margin-left: 15px
+                h2
+                    @include bold
+                    @include border-bottom3px
+                    letter-spacing: 0.18px
+                    font-size: 18px
+                    color: $headerColor
+                    margin-top: 50px
+                    margin-bottom: 50px
+                    padding-bottom: 14px
+                .menu_list-header1
+                    width: 60px
+                .menu_list-header2
+                    width: 195px
+                .menu_list-header3
+                    margin-bottom: 30px
+                    width: 83px
+                .menu_list-items
+                    display: flex
+                    flex-direction: column
+                    a
+                        @include border-bottom2px
+                        text-decoration: none
+                        text-transform: uppercase
+                        display: inline-block
+                        padding-bottom: 20px
+                        margin-bottom: 30px
+                        transition: 0.3s
+                        &:last-child
+                            margin-bottom: 0
+                        &:hover
+                            color: $baseColor
+                img
+                    width: 263px
+                    height: 100px
+                    border-radius: 4px
+                    transition: 0.5s
+                    &:hover
+                        transform: scale(1.05)
+                .menu_list-picture1, .menu_list-picture2
+                    @include border-bottom2px
+                    padding-bottom: 16px
+                    >p
+                        margin-top: 20px
+                .menu_list-picture2
+                    padding-top: 20px
+                    padding-bottom: 10px
+                    >p
+                        margin-bottom: 36px
+                    >button
+                        @include text
+                        @include border
+                        transition: 0.5s
+                        background: none
+                        border-radius: 4px
+                        color: $baseColor
+                        width: 120px
+                        height: 50px
+                        &:hover
+                            background: $baseColor
+                            color: #fff
+                .menu_list-text
+                    margin-top: 0
+                .menu_list-email, .menu_list-phone, .menu_list-addres
+                    @include border-bottom2px
+                    padding-top: 40px
+                    padding-bottom: 20px
+                    display: flex
+                    align-items: center
+                    >i
+                        display: block
+                        margin-right: 30px
+                        color: $baseColor
+                        font-size: 26px
+                        position: relative
+                        top: -2px
+                .menu_list-email
+                    p
+                        text-decoration: underline
+                .menu_list-addres
+                    margin-bottom: 50px
+                    p
+                        line-height: 24px
+        .content
+            transition: 0.5s
+            position: relative
+            z-index: 0
+            max-width: 90%
+            padding-top: 84px
+            margin: 0 5% 0
+            .main
+                h2
+                    @include bold
+                    @include border-bottom3px
+                    margin-top: 0
+                    margin-bottom: 77px
+                    padding-bottom: 20px
+                    color: $headerColor
+                    font-size: 18px
+                .main_container
+                    display: flex
+                    justify-content: space-between
+                    padding-bottom: 50px
+                    border-bottom: 1px solid $borderColor
+                    .main_container-text
+                        width: 47.5%
+                        margin-right: 2.5%
+                        h1
+                            @include bold
+                            margin: 0
+                            font-size: 36px
+                            line-height: 50px
+                            color: $headerColor
+                        .main_text-textQuestion
+                            margin-top: 10px
+                            color: $headerColor
+                            text-transform: uppercase
+                            margin-bottom: 0
+                        .main_text-textArticle
+                            margin-top: 30px
+                            margin-bottom: 36px
+                        button
+                            @include text
+                            @include border
+                            transition: 0.5s
+                            background: none
+                            border-radius: 4px
+                            color: $baseColor
+                            width: 200px
+                            height: 50px
+                            &:hover
+                                background: $baseColor
+                                color: #fff
+                    .main_container-img
+                        width: 47.5%
+                        margin-left: 2.5%
+                        display: inline-block
+                        overflow: hidden
+                        .adaptive-img
+                            display: block
+                            max-width: 100%
+                            height: auto
+                            transition: 0.5s
+                            &:hover
+                                transform: scale(1.1)
+            >h2
+                @include bold
+                @include border-bottom3px
+                display: inline-block
+                font-size: 24px
+                color: $headerColor
+                margin-top: 60px
+                padding-bottom: 9px
+                margin-bottom: 40px
+            .big-picture
+                display: inline-block
+                overflow: hidden
+                .img-adaptive
+                    display: block
+                    max-width: 100%
+                    height: auto
+                    transition: 0.5s
+                    &:hover
+                        transform: scale(1.1)
+            .latest_row1, .latest_row2, .latest_row3
+                @include border-bottom2px
+                display: flex
+                justify-content: space-between
+                h3
+                    @include bold
+                    margin-top: 20px
+                    font-size: 16px
+                    color: $headerColor
+                    margin-bottom: 25px
+                p
+                    margin-top: 0
+                    margin-bottom: 20px
+                button
+                    @include text
+                    @include border
+                    transition: 0.5s
+                    background: none
+                    border-radius: 4px
+                    color: $baseColor
+                    width: 120px
+                    height: 50px
+                    margin-bottom: 40px
+                    &:hover
+                        background: $baseColor
+                        color: #fff
+                .latest_row1-block1, .latest_row2-block1, .latest_row3-block1
+                    width: 47.5%
+                    margin-right: 2.5%
+                .latest_row1-block2, .latest_row2-block2, .latest_row3-block2
+                    width: 47.5%
+                    padding-left: 2.5%
+                    border-left: 2px solid $borderColor
+            .latest_row2, .latest_row3
+                img
+                    margin-top: 20px
+            .latest_row3
+                padding-bottom: 40px
+                margin-bottom: 60px
+                button
+                    margin-bottom: 0
+            .oneMoreThing
+                display: flex
+                justify-content: space-between
+                .oneMoreThing_container1
+                    margin-right: 5%
+                div
+                    width: 47.5%
+                    display: flex
+                    .oneMoreThing_container1-block2, .oneMoreThing_container1-block4
+                        margin-right: 0!important
+                    div
+                        width: 45%
+                        margin-right: 10%
+                        display: inline-block
+                        overflow: hidden
+                        .img-adaptive
+                            display: block
+                            max-width: 100%
+                            height: auto
+                            transition: 0.5s
+                            &:hover
+                                transform: scale(1.1)
+                        h3
+                            @include bold
+                            font-size: 16px
+                            color: $headerColor
+                            margin-top: 20px
+                            margin-bottom: 20px
+                        p
+                            margin-bottom: 28px
+                        button
+                            @include border
+                            @include text
+                            transition: 0.5s
+                            background: none
+                            border-radius: 4px
+                            color: $baseColor
+                            width: 80px
+                            height: 35px
+                            &:hover
+                                background: $baseColor
+                                color: #fff
+            footer
+                display: flex
+                justify-content: space-between
+                .users
+                    margin-right: 15%
+                .users, .youtube
+                    display: flex
+                    justify-content: space-around
+                    width: 42.5%
+                    .users_icon, .youtube_icon
+                        align-self: center
+                        position: relative
+                        top: -10px
+                        margin-right: 36px
+                        margin-left: 16px
+                i
+                    font-size: 38px
+                    color: $baseColor
+                p
+                    margin-bottom: 0
+                h3
+                    margin-top: 0
+                .youtube
+                    display: flex
+                    justify-content: space-around
+        .content_active
+            margin-left: 30%
+            max-width: 70%
+            margin-right: 5%
+            padding-left: 5%
+
+@include adaptiv
